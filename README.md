@@ -1,4 +1,5 @@
-Systém řízení rozpočtu
+Správce výdajů
+
 Tento projekt je jednoduchá webová aplikace pro správu osobního rozpočtu. 
 Umožňuje uživatelům přidávat, aktualizovat a mazat výdaje, které jsou ukládány do databáze.
 
