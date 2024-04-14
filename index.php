@@ -9,39 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systém řízení rozpočtu</title>
+    <title>Správce výdajů</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary text-center">
+    <nav class="navbar navbar-dark bg-dark text-center">
     <span class="navbar-brand mb-0 h1 text-center">Správce výdajů</span>
     </nav>
     <br><br><br>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h2 class="text-center">Přidat výdaj</h2>
-                <hr><br>
-                <form action="proces.php" method="POST">
-                    <div class="form-group">
-                        <label for="rozpocetNazev">Název rozpočtu</label>
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <input type="text" name="rozpocet" class="form-control" id="rozpocetNazev" placeholder="Zadejte název rozpočtu" required autocomplete="off"  value="<?php echo $jmeno; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="castka">Částka</label>
-                        <input type="text" name="castka" class="form-control" id="castka" placeholder="Zadejte částku" required  value="<?php echo $castka; ?>">
-                    </div>
-                    <?php if($aktualizace == true): ?>
-                    <button type="submit" name="update" class="btn btn-success btn-block">Editovat</button>
-                    <?php else: ?>
-                    <button type="submit" name="save" class="btn btn-primary btn-block">Uložit</button>
-                    <?php endif; ?>
-                </form>
-            </div>
-            <div class="col-md-8">
-                <h2 class="text-center">Celkové výdaje:  <?php echo $cely_rozpocet;?>   Kč</h2>
+            <div class="col-md-7">
+            <h2 class="text-center">Celkové výdaje:  <?php echo $cely_rozpocet;?>   Kč</h2>
                 <hr>
                 <br><br>
 
@@ -83,9 +63,33 @@
                                     <a href="proces.php?delete=<?php echo $radek['id']; ?>"  class="btn btn-danger">Smazat</a>
                                 </td>
                             </tr>
+                            
                         <?php endwhile ?>
                     </table>
+                    
                 </div>
+            </div>
+            
+
+            <div class="col-md-5">
+                <h2 class="text-center">Přidat výdaj</h2>
+                <hr><br>
+                <form action="proces.php" method="POST">
+                    <div class="form-group">
+                        <label for="rozpocetNazev">Název rozpočtu</label>
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <input type="text" name="rozpocet" class="form-control" id="rozpocetNazev" placeholder="Zadejte název rozpočtu" required autocomplete="off"  value="<?php echo $jmeno; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="castka">Částka</label>
+                        <input type="text" name="castka" class="form-control" id="castka" placeholder="Zadejte částku" required  value="<?php echo $castka; ?>">
+                    </div>
+                    <?php if($aktualizace == true): ?>
+                    <button type="submit" name="update" class="btn btn-success btn-block">Editovat</button>
+                    <?php else: ?>
+                    <button type="submit" name="save" class="btn btn-dark btn-block">Uložit</button>
+                    <?php endif; ?>
+                </form>
             </div>
         </div>
     </div>
