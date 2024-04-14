@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary text-center">
-    <span class="navbar-brand mb-0 h1 text-center">Systém řízení rozpočtu</span>
+    <span class="navbar-brand mb-0 h1 text-center">Správce výdajů</span>
     </nav>
     <br><br><br>
     <div class="container">
