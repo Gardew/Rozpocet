@@ -34,7 +34,7 @@
                         <input type="text" name="castka" class="form-control" id="castka" placeholder="Zadejte částku" required  value="<?php echo $castka; ?>">
                     </div>
                     <?php if($aktualizace == true): ?>
-                    <button type="submit" name="update" class="btn btn-success btn-block">Aktualizovat</button>
+                    <button type="submit" name="update" class="btn btn-success btn-block">Editovat</button>
                     <?php else: ?>
                     <button type="submit" name="save" class="btn btn-primary btn-block">Uložit</button>
                     <?php endif; ?>
@@ -77,9 +77,9 @@
                             while($radek = $vysledek->fetch_assoc()): ?>
                             <tr>
                                 <td><?php echo $radek['jmeno']; ?></td>
-                                <td> $<?php echo $radek['hodnota']; ?></td>
+                                <td> <?php echo $radek['hodnota']; ?> Kč</td>
                                 <td>
-                                    <a href="index.php?edit=<?php echo $radek['id']; ?>" class="btn btn-success">Aktualizovat</a>
+                                    <a href="index.php?edit=<?php echo $radek['id']; ?>" class="btn btn-success">Editovat</a>
                                     <a href="proces.php?delete=<?php echo $radek['id']; ?>"  class="btn btn-danger">Smazat</a>
                                 </td>
                             </tr>
