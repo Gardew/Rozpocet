@@ -1,6 +1,6 @@
 Správce výdajů
 
-Tento projekt je jednoduchá webová aplikace pro správu osobního rozpočtu. 
+Tento projekt je webová aplikace pro správu osobního rozpočtu. 
 Umožňuje uživatelům přidávat, aktualizovat a mazat výdaje, které jsou ukládány do databáze.
 
 Funkce
