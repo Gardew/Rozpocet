@@ -28,6 +28,3 @@ Konfigurace připojení k databázi:
 Upravte soubor proces.php a změňte parametry připojení k databázi podle vašeho nastavení.
 $pripojeni = new mysqli("localhost","root","","rozpocetDB");
 
-Spuštění aplikace:
-
-Otevřete index.php ve webovém prohlížeči.
